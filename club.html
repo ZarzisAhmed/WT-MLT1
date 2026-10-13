@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Club Membership</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 15px;
+      }
+
+      .nav-links {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .nav-links:hover {
+        color: green;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .card {
+        width: 400px;
+        max-width: 100%;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 20px auto;
+      }
+
+      form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+
+      fieldset {
+        padding: 20px;
+      }
+
+      input:not([type="radio"]),
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a class="nav-links" href="#">Home</a></li>
+        <li><a class="nav-links" href="#events">Events</a></li>
+        <li><a class="nav-links" href="#join">Join</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Programming Club</h1>
+
+      <div class="card">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <h2>Club Membership</h2>
+          <span class="badge">NEW</span>
+        </div>
+        <p>
+          Join the Programming Club to take part in contests, workshops and
+          weekly meetups.
+        </p>
+      </div>
+
+      <form action="/" method="post" id="join">
+        <fieldset>
+          <legend>Join the Club</legend>
+
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <br /><br />
+
+          <label for="studentID">Student ID:</label>
+          <input type="text" id="studentID" name="studentID" required />
+
+          <br /><br />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+
+          <br /><br />
+
+          <p>Membership Type:</p>
+
+          <input
+            type="radio"
+            id="general"
+            name="membership"
+            value="general"
+            required
+          />
+          <label for="general">General</label>
+
+          <input
+            type="radio"
+            id="executive"
+            name="membership"
+            value="executive"
+          />
+          <label for="executive">Executive</label>
+
+          <br /><br />
+
+          <label for="preferredClub">Preferred Club:</label>
+          <select id="preferredClub" name="club" required>
+            <option value="">Select a Club</option>
+            <option value="programming">Programming</option>
+            <option value="robotics">Robotics</option>
+            <option value="debate">Debate</option>
+          </select>
+
+          <br /><br />
+
+          <label for="joinReason">Why do you want to join?</label>
+          <textarea
+            id="joinReason"
+            name="joinReason"
+            rows="4"
+            required
+          ></textarea>
+
+          <input type="checkbox" id="agreement" name="agreement" required />
+          <label for="agreement">I agree to the club rules</label>
+
+          <button type="submit">Join Now</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
